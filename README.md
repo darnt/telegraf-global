@@ -8,6 +8,8 @@ Steps
 
 Setup secrets using systemd secretstores plugin (https://github.com/influxdata/telegraf/tree/master/plugins/secretstores/systemd)
 
+`sudo mkdir /etc/credstore.encrypted`
+
 `systemd-ask-password -n | sudo systemd-creds encrypt --name=  - /etc/credstore.encrypted/telegraf.influx_token_hosts`
 
 For systemd < v254 you need to provide an empty name to make it compatible.
